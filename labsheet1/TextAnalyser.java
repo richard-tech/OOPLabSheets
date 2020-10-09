@@ -6,8 +6,7 @@ public class TextAnalyser {
     public static void main(String[] args) {
 
         String text;
-        char character;
-        int totalLetters=0,i=0,vowels=0,numWords=1,edAppears=0,index=0;
+        int totalLetters=0,i=0,vowels=0,numWords=1,edAppears=0;
 
         Scanner input = new Scanner(System.in);
     do {
@@ -16,7 +15,7 @@ public class TextAnalyser {
             text = input.nextLine();
             i++;
 
-        character = text.charAt(index);
+
 
         System.out.println(i);
 
@@ -39,12 +38,12 @@ public class TextAnalyser {
             }
 
             for(int n=0; n<text.length();n++) {
-            if(text.endsWith("ed") && text.charAt(n) ==' ')
+            if(text.charAt(n)=='e' && text.charAt(n+1)=='d')
                 edAppears++;
 
             }
 
-        character = text.charAt(index);
+
 
 
             int sorted = totalLetters - numWords+(1);
